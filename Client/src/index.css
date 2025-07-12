@@ -9,6 +9,19 @@
    font-family: "Outfit", sans-serif;
 }
 
+@keyframes marqueeScroll {
+                0% { transform: translateX(0%); }
+                100% { transform: translateX(-50%); }
+            }
+
+            .marquee-inner {
+                animation: marqueeScroll 25s linear infinite;
+            }
+
+            .marquee-reverse {
+                animation-direction: reverse;
+}
+
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
