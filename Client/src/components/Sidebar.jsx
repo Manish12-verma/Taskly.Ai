@@ -40,7 +40,7 @@ const Sidebar = ({ Sidebar: isSidebarOpen, setSidebar }) => {
           alt="user_avatar"
           className="w-13 rounded-full mx-auto"
         />
-        <h1 className="mt-1 text-center">{user.fullName}</h1>
+        <h1 className="mt-1 text-center font-medium text-xl">{user.fullName}</h1>
         <div className="mt-5 px-6 text-sm text-gray-600 font-medium">
           {navItems.map(({ to, label, Icon }) => (
            <NavLink
@@ -74,7 +74,7 @@ const Sidebar = ({ Sidebar: isSidebarOpen, setSidebar }) => {
                </p>
          </div>
        </div>
-       <LogOut onClick={()=>signOut()} className="w-4.5 cursor-pointer text-gray-400 hover:text-gray-700 transition"/>
+       <LogOut onClick={()=>signOut()} className=" w-4.5 cursor-pointer text-gray-400 hover:text-gray-700 transition"/>
       </div>
     </div>
   );
