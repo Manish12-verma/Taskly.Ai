@@ -18,7 +18,7 @@ const Hero = () => {
       </div>
       <div className="flex flex-wrap justify-center gap-5 text-sm max-sm:text-xs ">
         <button
-          onClick={() => navigate()}
+          onClick={() => navigate('/ai')}
           className="bg-primary text-white px-10  py-3 rounded-lg hover:scale-105 transition duration-700  cursor-pointer"
         >
           Make Something Amazing
