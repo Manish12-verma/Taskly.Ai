@@ -1,4 +1,4 @@
-import { Protect, useClerk, UserButton, useUser } from "@clerk/clerk-react";
+import { Protect, useClerk, useUser } from "@clerk/clerk-react";
 import {
   Eraser,
   FileText,
@@ -10,7 +10,6 @@ import {
   SquarePen,
   Users,
 } from "lucide-react";
-import React from "react";
 import { NavLink } from "react-router-dom";
 
 const navItems = [
@@ -40,45 +39,60 @@ const Sidebar = ({ Sidebar: isSidebarOpen, setSidebar }) => {
           alt="user_avatar"
           className="w-13 rounded-full mx-auto"
         />
-        <h1 className="mt-1 text-center font-medium text-xl text-gray-700">{user.fullName}</h1>
+        <h1 className="mt-1 text-center font-medium text-xl text-gray-700">
+          {user.fullName}
+        </h1>
         <div className="mt-5 px-6 text-sm text-gray-600 font-medium">
           {navItems.map(({ to, label, Icon }) => (
-           <NavLink
-  key={to}
-  to={to}
-  end={to === "/ai"}
-  onClick={() => setSidebar(false)}
-  className={({ isActive }) =>
-    `px-3.5 py-2.5 flex items-center gap-3 rounded ${
-      isActive ? "bg-gradient-to-r from-[#8376bd] to-[#64388d] text-white" : ""
-    }`
-  }
->
-  {({ isActive }) => (
-    <>
-      <Icon className={`w-4 h-4 ${isActive ? "text-white" : "text-gray-600"}`} />
-      <span>{label}</span>
-    </>
-  )}
-</NavLink>
+            <NavLink
+              key={to}
+              to={to}
+              end={to === "/ai"}
+              onClick={() => setSidebar(false)}
+              className={({ isActive }) =>
+                `px-3.5 py-2.5 flex items-center gap-3 rounded ${
+                  isActive
+                    ? "bg-gradient-to-r from-[#8376bd] to-[#64388d] text-white"
+                    : ""
+                }`
+              }
+            >
+              {({ isActive }) => (
+                <>
+                  <Icon
+                    className={`w-4 h-4 ${
+                      isActive ? "text-white" : "text-gray-600"
+                    }`}
+                  />
+                  <span>{label}</span>
+                </>
+              )}
+            </NavLink>
           ))}
         </div>
       </div>
       <div className="w-full border-t border-gray-200 p-4 px-7 flex items-center justify-between">
-       <div className="flex gap-2 items-center cursor-pointer" onClick={openUserProfile}>
-         <img src={user.imageUrl} className="w-8 rounded-full" alt="" />
-         <div>
-               <h1 className="text-sm font-medium">{user.fullName}</h1>
-               <p className="text-xs text-gray-500">
-                  <Protect plan='premium' fallback="free">Premium</Protect> Plan
-               </p>
-         </div>
-       </div>
-       <LogOut onClick={()=>signOut()} className=" w-4.5 cursor-pointer text-gray-400 hover:text-gray-700 transition"/>
+        <div
+          className="flex gap-2 items-center"
+        >
+          <img src={user.imageUrl} className="w-8 rounded-full cursor-pointer"  onClick={openUserProfile}/>
+          <div className="flex flex-col">
+            <h1 className="text-sm font-medium">{user.fullName}</h1>
+            <p className="text-xs text-gray-500">
+              <Protect plan="premium" fallback="free">
+                Premium
+              </Protect>{" "}
+              Plan
+            </p>
+          </div>
+        </div>
+        <LogOut
+          onClick={signOut}
+          className="w-7 cursor-pointer text-gray-400 hover:text-gray-700 transition"
+        />
       </div>
     </div>
   );
 };
 
 export default Sidebar;
- 

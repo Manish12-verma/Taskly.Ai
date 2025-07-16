@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 import { assets } from "../assets/assets";
 import { Menu, X } from "lucide-react";
@@ -19,6 +19,9 @@ const Layout = () => {
           alt="logo"
           onClick={() => navigate("/")}
         />
+
+        {/* Mobile screen */ }
+
         {isSidebarOpen ? (
           <X
             className="w-6 h-6 text-gray-600 sm:hidden"
@@ -30,6 +33,8 @@ const Layout = () => {
             onClick={() => setIsSidebarOpen(true)}
           />
         )}
+
+        {/* Desktop screen */ }
       </nav>
       <div className="flex-1 w-full flex h-[calc(100vh-64px)]">
         <Sidebar Sidebar={isSidebarOpen} setSidebar={setIsSidebarOpen} /> 

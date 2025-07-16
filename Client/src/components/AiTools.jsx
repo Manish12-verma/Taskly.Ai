@@ -1,4 +1,3 @@
-import React from "react";
 import { AiToolsData } from "../assets/assets";
 import { useNavigate } from "react-router-dom";
 import { useClerk, useUser } from "@clerk/clerk-react";
@@ -17,7 +16,6 @@ const AiTools = () => {
     openSignIn();
   }
 };
-
   return (
     <div className="px-4 sm:px-20 xl:px-32 my-24">
       <div className="text-center">
@@ -46,7 +44,7 @@ const AiTools = () => {
             <h3 className="flex mt-6 mb-3 text-lg font-semibold">
               {tool.title}
             </h3>
-            <p className="text-gray-500 text-sm maxp-w-[95%]">
+            <p className="text-gray-500 text-sm max-w-[95%]">
               {tool.description}
             </p>
           </div>

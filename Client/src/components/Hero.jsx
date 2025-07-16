@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { assets } from "../assets/assets";
 
 const Hero = () => {
+
   const navigate = useNavigate();
 
   return (
@@ -23,8 +24,7 @@ const Hero = () => {
         >
           Make Something Amazing
         </button>
-
-        <button className="border border-gray-400 bg-white px-10 py-3 rounded-lg hover:scale-105 transition duration-700  cursor-pointer">
+        <button className="border border-gray-400 bg-white px-10 py-3 rounded-lg hover:scale-105 transition duration-700 cursor-pointer">
           Watch the Magic
         </button>
       </div>
