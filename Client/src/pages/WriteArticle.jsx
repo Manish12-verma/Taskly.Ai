@@ -16,6 +16,7 @@ const WriteArticle = () => {
   const onSubmitHandler = async (e) => {
     e.preventDefault();
     //have to write the logic to generate article
+    
   }
   return (
     <div className="h-full overflow-y-scroll p-6 flex ml-3 items-start flex-wrap gap-4 text-slate-700">

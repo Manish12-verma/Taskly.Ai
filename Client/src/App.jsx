@@ -11,8 +11,17 @@ import RemoveObject from "./pages/RemoveObject";
 import ReviewResume from "./pages/ReviewResume";
 import Community from "./pages/Community";
 import { Toaster } from 'react-hot-toast';
+import { useAuth } from "@clerk/clerk-react";
+import { useEffect } from "react";
 
 const App = () => {
+
+   const {getToken} = useAuth();
+
+   useEffect(() => {
+     getToken().then((token)=>console.log("Token fetched successfully:", token));
+   }, [])
+
   return (
     <div>
       <Toaster position="top-center" reverseOrder={false} />
