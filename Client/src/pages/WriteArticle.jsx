@@ -2,12 +2,10 @@ import { Edit, Sparkles } from "lucide-react";
 import React, { useState } from "react";
 
 const WriteArticle = () => {
-
   const articleLength = [
     {length:800,text:"Short (500-800 words)"},
     {length:1200,text:"Medium (800-1200 words)"},
     {length:1600,text:"Long (1200+ words)"}
-
   ]
 
   const [selectedLength, setSelectedLength] = useState(articleLength[0].length);
@@ -21,7 +19,6 @@ const WriteArticle = () => {
   return (
     <div className="h-full overflow-y-scroll p-6 flex ml-3 items-start flex-wrap gap-4 text-slate-700">
       {/*left col */}
-
       <form onSubmit={onSubmitHandler} className="w-full max-w-lg p-4 bg-white rounded-lg border border-gray-200 shadow-md">
 
         <div className="flex items-center gap-3 ">
