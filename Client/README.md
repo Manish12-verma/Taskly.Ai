@@ -189,16 +189,6 @@ We welcome contributions to Taskly.AI! Here's how you can help:
 -  **Performance** - Optimize the application
 
 
-##  Acknowledgments
-
-- **React Team** - For the amazing React framework
-- **Vite Team** - For the fast build tool
-- **Clerk** - For seamless authentication
-- **Tailwind CSS** - For the utility-first CSS framework
-- **Radix UI** - For accessible UI primitives
-- **Lucide** - For beautiful icons
-
-
 ---
 
 **Built with ❤️ by MANISH VERMA**
