@@ -1,4 +1,3 @@
-import React from "react";
 import { Routes, Route } from "react-router-dom";
 import WriteArticle from "./pages/WriteArticle";
 import Dashboard from "./pages/Dashboard";
@@ -17,10 +16,11 @@ import { useEffect } from "react";
 const App = () => {
 
    const {getToken} = useAuth();
-
+   
    useEffect(() => {
      getToken().then((token)=>console.log("Token fetched successfully:", token));
    }, [])
+
 
   return (
     <div>
@@ -32,10 +32,10 @@ const App = () => {
           <Route path="write-article" element={<WriteArticle />} />
           <Route path="blog-titles" element={<BlogTitles />} />
           <Route path="generate-images" element={<GenerateImages />} />
-           <Route path="remove-background" element={<RemoveBackground />} />
-           <Route path="remove-object" element={<RemoveObject />} />
-           <Route path="review-resume" element={<ReviewResume />} />
-           <Route path="community" element={<Community />} />
+          <Route path="remove-background" element={<RemoveBackground />} />
+          <Route path="remove-object" element={<RemoveObject />} />
+          <Route path="review-resume" element={<ReviewResume />} />
+          <Route path="community" element={<Community />} />
         </Route>
       </Routes>
     </div>
