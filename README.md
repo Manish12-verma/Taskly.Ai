@@ -1,10 +1,8 @@
 # Taskly.AI 
 
-**Intelligent Tools for Limitless Creation**
 
-Taskly.AI is a comprehensive AI-powered platform that provides intelligent tools for content creation, image generation, and document processing. Experience the power of artificial intelligence to generate, elevate, and perfect your content like never before.
+Taskly.AI is a modern AI-powered platform for content creation, image generation, and document processing. Built with React, Vite, and Tailwind CSS, it delivers high performance and a fully responsive UI. The app features modular architecture, secure authentication with Clerk, and user-friendly components powered by Radix UI and Lucide icons. With intelligent tools for writing, editing, and design, Taskly.AI enables fast, scalable, and efficient content generation for creators and professionals.
 
-![Taskly.AI Logo](public/taskly_logo.png)
 
 ##  Features
 
